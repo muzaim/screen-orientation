@@ -1,6 +1,7 @@
 import "./App.css";
 import { cobaMiring } from "./script";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
+import { useEffect } from "react";
 function App() {
   const ClickToMain = () => {
     return (
@@ -8,9 +9,7 @@ function App() {
         <p id="orientation-status"></p>
 
         <div id="buttons-container">
-          <button id="lock-landscape-button" onClick={cobaMiring}>
-            Click To Play
-          </button>
+          <button id="lock-landscape-button">Click To Play</button>
           <button id="unlock-button">Unlock</button>
         </div>
       </div>
@@ -32,6 +31,10 @@ function App() {
     );
   };
   // );
+
+  useEffect(() => {
+    window.screen.orientation.lock("landscape-primary");
+  });
   return (
     <DeviceOrientation lockOrientation={"landscape"}>
       {/* Will only be in DOM in landscape */}
