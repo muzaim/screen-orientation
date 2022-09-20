@@ -6,10 +6,10 @@
 // _LOCK_BUTTON.addEventListener("click", function () {});
 
 export const cobaMiring = () => {
-  if (document.documentElement.requestFullscreen)
-    document.querySelector("#container").requestFullscreen();
-  else if (document.documentElement.webkitRequestFullScreen)
-    document.querySelector("#container").webkitRequestFullScreen();
+  // if (document.documentElement.requestFullscreen)
+  //   document.querySelector("#container").requestFullscreen();
+  // else if (document.documentElement.webkitRequestFullScreen)
+  //   document.querySelector("#container").webkitRequestFullScreen();
 
   // IKI penting brow
   window.screen.orientation.lock("landscape-primary");
