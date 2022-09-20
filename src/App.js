@@ -2,7 +2,7 @@ import "./App.css";
 import { cobaMiring } from "./script";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
 function App() {
-  const Main = () => {
+  const ClickToMain = () => {
     return (
       <div id="container">
         <p id="orientation-status"></p>
@@ -18,20 +18,32 @@ function App() {
   };
   // return (
   //
-
+  const UdahMain = () => {
+    return (
+      <div>
+        <p>ini udah main</p>
+        <p>ini udah main</p>
+        <p>ini udah main</p>
+        <p>ini udah main</p>
+        <p>ini udah main</p>
+        <p>ini udah main</p>
+        <p>ini udah main</p>
+      </div>
+    );
+  };
   // );
   return (
     <DeviceOrientation lockOrientation={"landscape"}>
       {/* Will only be in DOM in landscape */}
       <Orientation orientation="landscape" alwaysRender={false}>
         <div>
-          <Main />
+          <UdahMain />
         </div>
       </Orientation>
       {/* Will stay in DOM, but is only visible in portrait */}
       <Orientation orientation="portrait" alwaysRender={false}>
         <div>
-          <p>Only visible in portrait</p>
+          <ClickToMain />
         </div>
       </Orientation>
     </DeviceOrientation>
